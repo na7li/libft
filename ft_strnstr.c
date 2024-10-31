@@ -6,7 +6,13 @@
 /*   By: mnahli <mnahli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 13:28:05 by mnahli            #+#    #+#             */
-/*   Updated: 2024/10/28 13:28:06 by mnahli           ###   ########.fr       */
+/*   Updated: 2024/10/31 21:48:46 by mnahli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
+char *ft_strnstr(const char *haystack, const char *needle, size_t len)
+{
+    
+}
