@@ -6,7 +6,7 @@
 /*   By: mnahli <mnahli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 13:27:35 by mnahli            #+#    #+#             */
-/*   Updated: 2024/10/29 17:11:44 by mnahli           ###   ########.fr       */
+/*   Updated: 2024/11/02 17:45:05 by mnahli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void ft_bzero(void *s, size_t n)
 {
     char *ptr = (char *)s;
-    int i = 0;
+    size_t i = 0;
 
     if (n != 0)
     {
