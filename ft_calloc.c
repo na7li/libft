@@ -6,7 +6,7 @@
 /*   By: mnahli <mnahli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 13:29:11 by mnahli            #+#    #+#             */
-/*   Updated: 2024/11/02 17:50:17 by mnahli           ###   ########.fr       */
+/*   Updated: 2024/11/02 17:56:37 by mnahli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,8 @@ void *ft_calloc(size_t count, size_t size)
 //     int *t2 =  calloc(0, 4);
 //     for (size_t i = 0; i < 4; i++)
 //     {
-//         printf("t  %d\n",t[i]);
+//         printf("t  %d\n", t[i]);
 //         printf("t2 %d\n", t2[i]);
-//         free (NULL);
+//         free (NULL); // handle the free situation
 //     }
 // }
