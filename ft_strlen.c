@@ -6,11 +6,12 @@
 /*   By: mnahli <mnahli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 13:28:02 by mnahli            #+#    #+#             */
-/*   Updated: 2024/10/29 10:07:05 by mnahli           ###   ########.fr       */
+/*   Updated: 2024/11/08 17:02:05 by mnahli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 int ft_strlen(const char *str)
 {
     int i = 0;

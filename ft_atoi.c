@@ -6,7 +6,7 @@
 /*   By: mnahli <mnahli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 13:21:27 by mnahli            #+#    #+#             */
-/*   Updated: 2024/11/02 13:27:14 by mnahli           ###   ########.fr       */
+/*   Updated: 2024/11/08 17:21:13 by mnahli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,16 +40,16 @@ int ft_atoi(const char *str)
     return ((num * val));   // return ((int)(num * val));
 }
 
-// int main()
-// {
-//     printf("%i\n", ft_atoi("999999999999999999453513k"));
-//     printf("%i\n", atoi("999999999999999999453513k"));
-// //     printf("%i\n", atoi("   +123dfg"));
-// //     printf("%i\n", atoi("   -1235er"));
-// //     printf("%i\n", atoi("   --123ert"));
-// //     printf("%i\n", atoi("   -+123dfg"));
-// //     printf("%i\n", atoi("   ++123erg"));
-// //     printf("%i\n", atoi("   -s123fgh"));
-// //     printf("%i\n", atoi("   sdf123rth"));
-// //     printf("%i\n", atoi(" d  123rth"));
-// }
+int main()
+{
+    printf("%i\n", ft_atoi("999999999999999999453513k"));
+    printf("%i\n", atoi("999999999999999999453513k"));
+//     printf("%i\n", atoi("   +123dfg"));
+//     printf("%i\n", atoi("   -1235er"));
+//     printf("%i\n", atoi("   --123ert"));
+//     printf("%i\n", atoi("   -+123dfg"));
+//     printf("%i\n", atoi("   ++123erg"));
+//     printf("%i\n", atoi("   -s123fgh"));
+//     printf("%i\n", atoi("   sdf123rth"));
+//     printf("%i\n", atoi(" d  123rth"));
+}
