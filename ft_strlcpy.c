@@ -6,7 +6,7 @@
 /*   By: mnahli <mnahli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 13:28:01 by mnahli            #+#    #+#             */
-/*   Updated: 2024/10/30 15:18:22 by mnahli           ###   ########.fr       */
+/*   Updated: 2024/11/10 18:17:04 by mnahli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int ft_strlcpy(char *dst, const char *src, int dstsize)
 {
-    size_t i;    
+    int i;    
     size_t strlen;
     
     i = 0;

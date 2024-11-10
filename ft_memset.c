@@ -6,7 +6,7 @@
 /*   By: mnahli <mnahli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 13:27:56 by mnahli            #+#    #+#             */
-/*   Updated: 2024/10/29 16:04:40 by mnahli           ###   ########.fr       */
+/*   Updated: 2024/11/10 18:16:21 by mnahli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void *ft_memset(void *b, int c, size_t len)
 {
     unsigned char *ptr = (unsigned char *)b;
-    int i = 0;
+    size_t i = 0;
 
     while (i < len)
     {
