@@ -6,7 +6,7 @@
 /*   By: mnahli <mnahli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 13:46:23 by mnahli            #+#    #+#             */
-/*   Updated: 2024/11/06 17:35:27 by mnahli           ###   ########.fr       */
+/*   Updated: 2024/11/10 18:55:48 by mnahli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,9 +62,7 @@ int ft_sufix_len(const char* s1, char const *set)
 
 char *ft_strtrim(char const *s1, char const *set)
 {
-    size_t len_s1;    
     size_t len_prefix;
-    size_t len_suffix;
     size_t len_str;
     unsigned int i;
     char *ptr;

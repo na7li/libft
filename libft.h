@@ -6,7 +6,7 @@
 /*   By: mnahli <mnahli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 13:20:52 by mnahli            #+#    #+#             */
-/*   Updated: 2024/11/08 21:27:40 by mnahli           ###   ########.fr       */
+/*   Updated: 2024/11/10 19:03:56 by mnahli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 #include <stdlib.h>
 #include <limits.h>
 #include <stdlib.h>
+#include <unistd.h>
 
 int ft_isalpha(int c);
 int ft_isdigit(int c);

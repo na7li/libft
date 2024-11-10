@@ -6,7 +6,7 @@
 /*   By: mnahli <mnahli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 17:46:59 by mnahli            #+#    #+#             */
-/*   Updated: 2024/11/07 19:08:19 by mnahli           ###   ########.fr       */
+/*   Updated: 2024/11/10 18:57:17 by mnahli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ char* ft_word_copy(char const *s, unsigned int j, size_t l)
 }
 char **ft_split(char const *s, char c)
 {
-    int n;
+    unsigned int n;
     unsigned int j;
     unsigned int m;
     size_t l;

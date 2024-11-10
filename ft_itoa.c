@@ -6,7 +6,7 @@
 /*   By: mnahli <mnahli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 17:22:21 by mnahli            #+#    #+#             */
-/*   Updated: 2024/11/08 17:26:10 by mnahli           ###   ########.fr       */
+/*   Updated: 2024/11/10 18:57:52 by mnahli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,6 @@ char *ft_itoa(int n) /* '~' MAIN FUNCTION '_' */
     int sign = 1;
     size_t len;
     char* str;
-    int i;
 
     if(n == -2147483648)
     {

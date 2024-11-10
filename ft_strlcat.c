@@ -6,7 +6,7 @@
 /*   By: mnahli <mnahli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 13:27:59 by mnahli            #+#    #+#             */
-/*   Updated: 2024/10/31 11:16:56 by mnahli           ###   ########.fr       */
+/*   Updated: 2024/11/10 18:52:16 by mnahli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ size_t ft_strlcat(char *dst, const char *src, size_t dstsize)
     
     if (dstsize <= dst_len)
         return (dstsize + src_len);
-        
+    i = 0;    
     while (src[i] && dst_len + i < dstsize - 1)
     {
         dst[dst_len + i] = src[i];
