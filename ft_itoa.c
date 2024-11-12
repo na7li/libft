@@ -6,13 +6,13 @@
 /*   By: mnahli <mnahli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 17:22:21 by mnahli            #+#    #+#             */
-/*   Updated: 2024/11/10 18:57:52 by mnahli           ###   ########.fr       */
+/*   Updated: 2024/11/11 21:09:39 by mnahli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_lencalcul(int n)
+static int ft_lencalcul(int n)
 {
     size_t len = 1;
     if(n / 10 == 0)
@@ -24,7 +24,7 @@ int ft_lencalcul(int n)
     }
     return (len);
 }
-char* ft_allocation(size_t len)
+static char* ft_allocation(size_t len)
 {
     char* str;
     str = (char*)malloc(len + 1);
@@ -32,7 +32,7 @@ char* ft_allocation(size_t len)
         return (NULL);
     return (str);
 }
-char* ft_convcopy(char* str, int n, size_t len, int sign)
+static char* ft_convcopy(char* str, int n, size_t len, int sign)
 {
     int i;
     i = len;
@@ -73,9 +73,10 @@ char *ft_itoa(int n) /* '~' MAIN FUNCTION '_' */
 
     return (str);
 }
-int main()
-{
-    int n = -2147483648;
-    printf("%s\n", ft_itoa(n));
-    return 0;
-}
+
+// int main()
+// {
+//     int n = -2147483648;
+//     printf("%s\n", ft_itoa(n));
+//     return 0;
+// }

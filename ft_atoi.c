@@ -6,7 +6,7 @@
 /*   By: mnahli <mnahli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 13:21:27 by mnahli            #+#    #+#             */
-/*   Updated: 2024/11/08 17:21:13 by mnahli           ###   ########.fr       */
+/*   Updated: 2024/11/11 21:05:51 by mnahli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int ft_atoi(const char *str)
         }
     return ((num * val));   // return ((int)(num * val));
 }
-
+/*
 int main()
 {
     printf("%i\n", ft_atoi("999999999999999999453513k"));
@@ -53,3 +53,4 @@ int main()
 //     printf("%i\n", atoi("   sdf123rth"));
 //     printf("%i\n", atoi(" d  123rth"));
 }
+*/

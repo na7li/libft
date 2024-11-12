@@ -6,13 +6,13 @@
 /*   By: mnahli <mnahli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 17:46:59 by mnahli            #+#    #+#             */
-/*   Updated: 2024/11/10 18:57:17 by mnahli           ###   ########.fr       */
+/*   Updated: 2024/11/11 21:09:13 by mnahli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_word_count(char const *s, char c)
+static int ft_word_count(char const *s, char c)
 {
     unsigned int i;
     unsigned int word;
@@ -35,7 +35,7 @@ int ft_word_count(char const *s, char c)
     return (n);
 }
 
-int ft_word_len(char const *s, char c, unsigned int i)
+static int ft_word_len(char const *s, char c, unsigned int i)
 {
     unsigned int l;
     l = 0;
@@ -46,7 +46,7 @@ int ft_word_len(char const *s, char c, unsigned int i)
     }
     return (l);
 }
-char* ft_word_copy(char const *s, unsigned int j, size_t l)
+static char* ft_word_copy(char const *s, unsigned int j, size_t l)
 {
     unsigned int i;
     char* word;
