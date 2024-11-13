@@ -6,7 +6,7 @@
 /*   By: mnahli <mnahli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 13:27:59 by mnahli            #+#    #+#             */
-/*   Updated: 2024/11/13 11:44:34 by mnahli           ###   ########.fr       */
+/*   Updated: 2024/11/13 13:44:13 by mnahli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 
 	dst_len = ft_strlen(dst);
 	src_len = ft_strlen(src);
+	if (!dst && dstsize == 0)
+		return (src_len);
 	if (dstsize <= dst_len)
 		return (dstsize + src_len);
 	i = 0;
@@ -34,7 +36,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 
 // int main()
 // {
-//     size_t s = 2;
+//     size_t s = 5;
 
 //     char ftdst[50] = "abc";
 //     char dst[50] = "abc";
@@ -42,8 +44,10 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 //     printf("1.1 dst lenth is :  %ld\n", strlen(dst));
 //     printf("1.2 dst_size =  %zu\n", s);
 //     printf("2. src lenth =  4\n");
+
 //     printf("ft_strlcat return is :     %ld\n", ft_strlcat(ftdst, src, s));
 //     printf("dst is :    %s\n", ftdst);
+
 //     printf("strlcat return is :     %ld\n", strlcat(dst, src, s));
 //     printf("dst is :    %s\n", dst);
 //     printf("\n");

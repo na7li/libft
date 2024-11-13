@@ -6,7 +6,7 @@
 /*   By: mnahli <mnahli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 13:27:41 by mnahli            #+#    #+#             */
-/*   Updated: 2024/11/13 12:30:19 by mnahli           ###   ########.fr       */
+/*   Updated: 2024/11/13 12:56:20 by mnahli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_isalnum(int c)
 {
-	if ((c >= '0' && c <= '9') || ft_isalpha(c))
+	if (ft_isalpha(c) || ft_isalpha(c))
 		return (1);
 	return (0);
 }

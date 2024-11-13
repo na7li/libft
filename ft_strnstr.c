@@ -6,7 +6,7 @@
 /*   By: mnahli <mnahli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 13:28:05 by mnahli            #+#    #+#             */
-/*   Updated: 2024/11/13 11:35:14 by mnahli           ###   ########.fr       */
+/*   Updated: 2024/11/13 15:42:51 by mnahli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 // int main()
 // {
 //     char haystack[] = "i lean c language in 42 school";
-//     char needle[] = "leag";
-//     size_t len = 50;
+//     char needle[] = "lang";
+//     size_t len = 0;
 
 //     printf("%s\n", ft_strnstr(haystack, needle, len));
 //     printf("%s\n", strnstr(haystack, needle, len));

@@ -6,7 +6,7 @@
 /*   By: mnahli <mnahli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 13:21:27 by mnahli            #+#    #+#             */
-/*   Updated: 2024/11/13 12:34:50 by mnahli           ###   ########.fr       */
+/*   Updated: 2024/11/13 17:15:21 by mnahli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,10 @@
 
 int	ft_atoi(const char *str)
 {
-	size_t	i;
+	int	i = 0;
 	int	val;
 	unsigned long long	num;
 
-	i = 0;
 	val = 1;
 	num = 0;
 	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
@@ -40,18 +39,19 @@ int	ft_atoi(const char *str)
 	}
 	return ((num * val));
 }
-/*
-int main()
-{
-	printf("%i\n", ft_atoi("999999999999999999453513k"));
-	printf("%i\n", atoi("999999999999999999453513k"));
-//     printf("%i\n", atoi("   +123dfg"));
-//     printf("%i\n", atoi("   -1235er"));
-//     printf("%i\n", atoi("   --123ert"));
-//     printf("%i\n", atoi("   -+123dfg"));
-//     printf("%i\n", atoi("   ++123erg"));
-//     printf("%i\n", atoi("   -s123fgh"));
-//     printf("%i\n", atoi("   sdf123rth"));
-//     printf("%i\n", atoi(" d  123rth"));
-}
-*/
+
+// int main()
+// {
+// 	printf("%i\n", ft_atoi("abc"));
+// 	printf("%i\n", atoi("abc"));
+// 	printf("%i\n", ft_atoi("-9223372036854775807"));
+// 	printf("%i\n", atoi("-9223372036854775807"));
+//     // printf("%i\n", ft_atoi("   +123dfg"));
+//     // printf("%i\n", ft_atoi("   -1235er"));
+//     // printf("%i\n", ft_atoi("   --123ert"));
+//     // printf("%i\n", ft_atoi("   -+123dfg"));
+//     // printf("%i\n", ft_atoi("   ++123erg"));
+//     // printf("%i\n", ft_atoi("   -s123fgh"));
+//     // printf("%i\n", ft_atoi("   sdf123rth"));
+//     // printf("%i\n", ft_atoi(" d  123rth"));
+// }
