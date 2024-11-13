@@ -6,23 +6,23 @@
 /*   By: mnahli <mnahli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 19:03:04 by mnahli            #+#    #+#             */
-/*   Updated: 2024/11/12 18:55:06 by mnahli           ###   ########.fr       */
+/*   Updated: 2024/11/13 12:21:17 by mnahli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstadd_back(t_list **lst, t_list *new)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-    t_list *ptr;
-    ptr = *lst;
-    
-    if(!ptr)    // si ya pas de node (NULL) lst va pointer sur new;
-        *lst = new;
-    while(ptr->next != NULL)
-        ptr = ptr->next;
-    ptr->next = new;
-    new->next = NULL;
+	t_list	*ptr;
+
+	ptr = *lst;
+	if (!ptr)
+		*lst = new;
+	while (ptr->next != NULL)
+		ptr = ptr->next;
+	ptr->next = new;
+	new->next = NULL;
 }
 // int main()
 // {
@@ -47,7 +47,7 @@ void ft_lstadd_back(t_list **lst, t_list *new)
 //     //     tmp = tmp->next;
 //     // }
 //     // printf("\n");
-    
+
 //     n5->content = "nahli";
 //     // n5->next = NULL;
 
@@ -60,6 +60,6 @@ void ft_lstadd_back(t_list **lst, t_list *new)
 //         tmp = tmp->next;
 //     }
 //     printf("\n");
-    
+
 //     return 0;
 // }

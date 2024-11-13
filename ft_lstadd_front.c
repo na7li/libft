@@ -6,16 +6,16 @@
 /*   By: mnahli <mnahli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 18:31:51 by mnahli            #+#    #+#             */
-/*   Updated: 2024/11/12 12:06:12 by mnahli           ###   ########.fr       */
+/*   Updated: 2024/11/13 12:20:17 by mnahli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstadd_front(t_list **lst, t_list *new)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-    new->next = *lst;
-    *lst = new;
+	new->next = *lst;
+	*lst = new;
 }
 // int main()
 // {
@@ -40,7 +40,7 @@ void ft_lstadd_front(t_list **lst, t_list *new)
 //     //     temp = temp->next;
 //     // }
 //     // printf("%s\n", temp->content);
-    
+
 //     t_list *n0;
 //     n0 = malloc(sizeof(t_list));
 //     n0->content = "slm ";

@@ -6,25 +6,25 @@
 /*   By: mnahli <mnahli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 18:47:55 by mnahli            #+#    #+#             */
-/*   Updated: 2024/11/12 13:52:54 by mnahli           ###   ########.fr       */
+/*   Updated: 2024/11/13 12:13:20 by mnahli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_lstsize(t_list *lst)
+int	ft_lstsize(t_list *lst)
 {
-    int len;
-    
-    t_list* tmp;
-    tmp = lst;
-    len = 0;
-    while(tmp != NULL)
-    {
-        len++;
-        tmp = tmp->next;
-    }
-    return (len);
+	int	len;
+	t_list	*tmp;
+
+	tmp = lst;
+	len = 0;
+	while (tmp != NULL)
+	{
+		len++;
+		tmp = tmp->next;
+	}
+	return (len);
 }
 // int main()
 // {

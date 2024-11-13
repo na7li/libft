@@ -6,30 +6,32 @@
 /*   By: mnahli <mnahli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 13:28:09 by mnahli            #+#    #+#             */
-/*   Updated: 2024/10/31 13:48:51 by mnahli           ###   ########.fr       */
+/*   Updated: 2024/11/13 11:33:28 by mnahli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
-    char x = (char)c;
-    unsigned int i = 0;
-    unsigned int j = 0;
+	char	x;
+	size_t	i;
+	size_t	j;
 
-    while (s[i] != '\0')
-    {
-        if (s[i] == x)
-            j = i;
-        i++;
-    }
-    if (s[j] == x)
-        return ((char *)s + j);
-        
-    if (s[i] == '\0')
-        return ((char *)s + i);
-    return (NULL);
+	x = (char)c;
+	i = 0;
+	j = 0;
+	while (s[i] != '\0')
+	{
+		if (s[i] == x)
+			j = i;
+		i++;
+	}
+	if (s[j] == x)
+		return ((char *)s + j);
+	if (s[i] == '\0')
+		return ((char *)s + i);
+	return (NULL);
 }
 // int main()
 // {

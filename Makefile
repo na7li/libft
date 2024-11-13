@@ -32,4 +32,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: clean #pour forcer le netoyage meme s'il y a deja un fichier nomme "clean";
+.PHONY: clean

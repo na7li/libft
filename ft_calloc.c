@@ -6,23 +6,23 @@
 /*   By: mnahli <mnahli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 13:29:11 by mnahli            #+#    #+#             */
-/*   Updated: 2024/11/02 17:56:37 by mnahli           ###   ########.fr       */
+/*   Updated: 2024/11/13 12:30:36 by mnahli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_calloc(size_t count, size_t size)
+void	*ft_calloc(size_t count, size_t size)
 {
-    size_t total;
-    unsigned char *ptr;
+	size_t	total;
+	unsigned char	*ptr;
 
-    total = count * size;
-    ptr = malloc(total);
-    if (ptr == '\0')
-        return NULL;
-    ft_bzero(ptr, total);
-    return (ptr);
+	total = count * size;
+	ptr = malloc(total);
+	if (ptr == '\0')
+		return (NULL);
+	ft_bzero(ptr, total);
+	return (ptr);
 }
 
 // int main()
