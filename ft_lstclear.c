@@ -12,28 +12,49 @@
 
 #include "libft.h"
 
-void	ft_lstclear(t_list **lst, void (*del)(void*))
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*tmp;
-	t_list	*nxt_tmp;
 
-	tmp = *lst;
-	nxt_tmp = *lst;
-	while (nxt_tmp->next->next != NULL)
+	if (!lst || !del)
+		return ;
+	while (*lst)
 	{
+		tmp = *lst;
+		*lst = (*lst)->next;
 		del(tmp->content);
-		free (tmp);
-		tmp = nxt_tmp;
-		nxt_tmp = nxt_tmp->next;
+		free(tmp);
 	}
-	del(tmp->content);
-	free (tmp);
-	del(nxt_tmp->content);
-	free (nxt_tmp);
-	free (&tmp);
-	free (&nxt_tmp);
 	*lst = NULL;
 }
+
+// f
+
+// void del(void* content)
+// {
+// 	free(content);
+// }
+// int main()
+// {
+// 	t_list* n1, *n2, *n3, *n4;
+// 	n1 = malloc(sizeof(t_list));
+// 	n2 = malloc(sizeof(t_list));
+// 	n3 = malloc(sizeof(t_list));
+// 	n4 = malloc(sizeof(t_list));
+// 	t_list* tmp;
+// 	tmp = n1;
+// 	n1->content = ft_strdup("my");
+// 	n1->next = n2;
+// 	n2->content = ft_strdup("name");
+// 	n2->next = n3;
+// 	n3->content = ft_strdup("is");
+// 	n3->next = n4;
+// 	n4->content = ft_strdup("simo");
+// 	n4->next = NULL;
+// 	ft_lstclear(&n1, del);
+// 	if (n1 == NULL)
+// 		printf("list is cleared");
+// }
 
 // void ft_lstclear(t_list **lst, void (*del)(void*))
 // {

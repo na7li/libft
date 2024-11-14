@@ -6,7 +6,7 @@
 /*   By: mnahli <mnahli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 12:57:03 by mnahli            #+#    #+#             */
-/*   Updated: 2024/11/13 11:17:28 by mnahli           ###   ########.fr       */
+/*   Updated: 2024/11/13 17:54:16 by mnahli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,11 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*substr;
-	size_t	s_len;
 	size_t	i;
 
 	if (!s)
 		return (NULL);
-	s_len = ft_strlen(s);
-	if (start >= s_len)
+	if (start >= ft_strlen(s))
 	{
 		substr = (char *)malloc(1);
 		if (!substr)
@@ -30,8 +28,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 			substr[0] = '\0';
 		return (substr);
 	}
-	if (len > (s_len - start))
-		len = s_len - start;
+	if (len > (ft_strlen(s) - start))
+		len = ft_strlen(s) - start;
 	substr = (char *)malloc((len + 1) * sizeof(char));
 	if (!substr)
 		return (NULL);
@@ -44,8 +42,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 // int main()
 // {
 //     char s[] = "Hello World hey weo";
-//     size_t len = 5;
+//     size_t len = 8;
 //     unsigned int start = 6;
-//     printf("%s\n", ft_substr(s, start, len));    
+//     printf("%s\n", ft_substr(s, start, len));
 //     return 0;
 // }

@@ -6,7 +6,7 @@
 /*   By: mnahli <mnahli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 18:19:47 by mnahli            #+#    #+#             */
-/*   Updated: 2024/11/13 12:15:47 by mnahli           ###   ########.fr       */
+/*   Updated: 2024/11/13 19:50:58 by mnahli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ t_list	*ft_lstnew(void *content)
 	t_list	*head;
 
 	head = malloc(sizeof(t_list));
+	if (!head)
+		return (NULL);
 	head->content = content;
 	head->next = NULL;
 	return (head);
@@ -28,5 +30,5 @@ t_list	*ft_lstnew(void *content)
 //     new->content = (long *)124545454545454;
 //     new->next = NULL;
 //     printf("%ld\n", (long)new->content);
-//     return 0;
+//     return (0);
 // }

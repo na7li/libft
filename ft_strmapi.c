@@ -6,7 +6,7 @@
 /*   By: mnahli <mnahli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 17:50:19 by mnahli            #+#    #+#             */
-/*   Updated: 2024/11/13 11:40:57 by mnahli           ###   ########.fr       */
+/*   Updated: 2024/11/13 19:48:20 by mnahli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		return (NULL);
 	len = ft_strlen(s);
 	ptr = (char *)malloc((len + 1) * sizeof(char));
+	if (!ptr)
+		return (NULL);
 	i = 0;
 	while (s[i])
 	{
@@ -38,7 +40,7 @@ char	lowercase_wrapper(unsigned int i, char c)
 	return (ft_tolower(c));
 }
 
-// int	main() {
+// int	main(void) {
 // 	char	*str;
 // 	char	*result;
 
@@ -52,5 +54,5 @@ char	lowercase_wrapper(unsigned int i, char c)
 // 	}
 // 	else
 // 		printf("Memory allocation failed!\n");
-// 	return 0;
+// 	return (0);
 // }

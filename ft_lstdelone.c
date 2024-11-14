@@ -6,18 +6,17 @@
 /*   By: mnahli <mnahli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 09:20:03 by mnahli            #+#    #+#             */
-/*   Updated: 2024/11/13 16:41:42 by mnahli           ###   ########.fr       */
+/*   Updated: 2024/11/13 19:55:24 by mnahli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstdelone(t_list *lst, void (*del)(void*))
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	t_list	*tmp;
-
-	tmp = lst;
-	del(tmp->content);
+	if (!lst || !del)
+		return ;
+	del(lst->content);
 	free(lst);
 }
 // void del(void* content)
@@ -44,7 +43,7 @@ void	ft_lstdelone(t_list *lst, void (*del)(void*))
 // 	ft_lstdelone(n1, del);
 // 	while (tmp)
 // 	{
-// 	    printf("%s ", tmp->content);
-// 	    tmp = tmp->next;
+// 			printf("%s ", tmp->content);
+// 			tmp = tmp->next;
 // 	}
 // }

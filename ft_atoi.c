@@ -6,7 +6,7 @@
 /*   By: mnahli <mnahli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 13:21:27 by mnahli            #+#    #+#             */
-/*   Updated: 2024/11/13 17:15:21 by mnahli           ###   ########.fr       */
+/*   Updated: 2024/11/13 19:46:20 by mnahli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,11 @@
 
 int	ft_atoi(const char *str)
 {
-	int	i = 0;
-	int	val;
+	int					i;
+	int					val;
 	unsigned long long	num;
 
+	i = 0;
 	val = 1;
 	num = 0;
 	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)

@@ -6,7 +6,7 @@
 /*   By: mnahli <mnahli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 13:27:54 by mnahli            #+#    #+#             */
-/*   Updated: 2024/11/13 13:12:25 by mnahli           ###   ########.fr       */
+/*   Updated: 2024/11/13 19:49:44 by mnahli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	char	*d_ptr;
+	char		*d_ptr;
 	const char	*s_ptr;
-	size_t	i;
+	size_t		i;
 
 	d_ptr = (char *)dst;
 	s_ptr = (const char *)src;

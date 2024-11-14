@@ -6,7 +6,7 @@
 /*   By: mnahli <mnahli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 19:03:04 by mnahli            #+#    #+#             */
-/*   Updated: 2024/11/13 12:21:17 by mnahli           ###   ########.fr       */
+/*   Updated: 2024/11/13 19:44:03 by mnahli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,17 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*ptr;
 
+	if (!lst)
+		return ;
+	if (!*lst)
+	{
+		*lst = new;
+		return ;
+	}
 	ptr = *lst;
 	if (!ptr)
 		*lst = new;
-	while (ptr->next != NULL)
-		ptr = ptr->next;
+	ptr = ft_lstlast(*lst);
 	ptr->next = new;
 	new->next = NULL;
 }
@@ -61,5 +67,5 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 //     }
 //     printf("\n");
 
-//     return 0;
+//     return (0);
 // }

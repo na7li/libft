@@ -6,7 +6,7 @@
 /*   By: mnahli <mnahli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 17:22:21 by mnahli            #+#    #+#             */
-/*   Updated: 2024/11/13 12:25:53 by mnahli           ###   ########.fr       */
+/*   Updated: 2024/11/13 19:55:49 by mnahli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,16 +27,6 @@ static int	ft_lencalcul(int n)
 	return (len);
 }
 
-static char	*ft_allocation(size_t len)
-{
-	char	*str;
-
-	str = (char *)malloc(len + 1);
-	if (!str)
-		return (NULL);
-	return (str);
-}
-
 static char	*ft_convcopy(char *str, int n, size_t len, int sign)
 {
 	int	i;
@@ -50,22 +40,19 @@ static char	*ft_convcopy(char *str, int n, size_t len, int sign)
 		i--;
 	}
 	if (sign < 0)
-		str[i + 1] = '-';
+		str[0] = '-';
 	return (str);
 }
 
 char	*ft_itoa(int n)
 {
-	int	sign;
+	int		sign;
 	size_t	len;
 	char	*str;
 
 	sign = 1;
 	if (n == -2147483648)
-	{
-		str = ft_strdup("-2147483648");
-		return (str);
-	}
+		return (ft_strdup("-2147483648"));
 	if (n < 0)
 	{
 		sign *= -1;
@@ -74,14 +61,9 @@ char	*ft_itoa(int n)
 	len = ft_lencalcul(n);
 	if (sign < 0)
 		len += 1;
-	str = ft_allocation(len);
+	str = (char *)malloc(len + 1);
+	if (!str)
+		return (NULL);
 	str = ft_convcopy(str, n, len, sign);
 	return (str);
 }
-
-// int main()
-// {
-//     int n = -2147483648;
-//     printf("%s\n", ft_itoa(n));
-//     return 0;
-// }

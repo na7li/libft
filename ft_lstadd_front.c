@@ -6,7 +6,7 @@
 /*   By: mnahli <mnahli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 18:31:51 by mnahli            #+#    #+#             */
-/*   Updated: 2024/11/13 12:20:17 by mnahli           ###   ########.fr       */
+/*   Updated: 2024/11/13 19:34:40 by mnahli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
+	if (!lst || !new)
+		return ;
 	new->next = *lst;
 	*lst = new;
 }
@@ -52,5 +54,5 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 //         temp = temp->next;
 //     }
 //     printf("%s\n", temp->content);
-//     return 0;
+//     return (0);
 // }

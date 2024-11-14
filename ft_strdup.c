@@ -6,7 +6,7 @@
 /*   By: mnahli <mnahli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 17:54:19 by mnahli            #+#    #+#             */
-/*   Updated: 2024/11/13 11:48:03 by mnahli           ###   ########.fr       */
+/*   Updated: 2024/11/13 19:02:38 by mnahli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,19 @@ char	*ft_strdup(const char *s1)
 {
 	char	*ptr;
 	size_t	len;
+	size_t	i;
 
 	len = ft_strlen(s1);
-	ptr = (char *) malloc(len + 1);
+	ptr = (char *)malloc(len + 1);
 	if (!ptr)
 		return (NULL);
-	ptr = ft_memcpy(ptr, s1, len);
+	i = 0;
+	while (i < len)
+	{
+		ptr[i] = s1[i];
+		i++;
+	}
+	ptr[i] = '\0';
 	return (ptr);
 }
 // int main()

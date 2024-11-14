@@ -6,7 +6,7 @@
 /*   By: mnahli <mnahli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 18:47:55 by mnahli            #+#    #+#             */
-/*   Updated: 2024/11/13 12:13:20 by mnahli           ###   ########.fr       */
+/*   Updated: 2024/11/13 19:50:43 by mnahli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_lstsize(t_list *lst)
 {
-	int	len;
+	int		len;
 	t_list	*tmp;
 
 	tmp = lst;

@@ -6,7 +6,7 @@
 /*   By: mnahli <mnahli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 13:46:23 by mnahli            #+#    #+#             */
-/*   Updated: 2024/11/13 11:29:16 by mnahli           ###   ########.fr       */
+/*   Updated: 2024/11/13 19:16:42 by mnahli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ int	ft_sufix_len(const char *s1, char const *set)
 
 	len_s1 = ft_strlen(s1);
 	k = len_s1 - 1;
-	while (s1[k])
+	while (k != 0)
 	{
 		j = 0;
 		while (set[j])
@@ -83,27 +83,28 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ptr[i] = '\0';
 	return (ptr);
 }
-// int main()
+
+// int	main(void)
 // {
-//     char s1[] = "abcaacbI'm nahliabcbacab";
-//     char set[] = "abc";
-//     printf("%s\n", ft_strtrim(s1, set));
+// 	char s1[] = "abcaacbI'm nahliabcbacab";
+// 	char set[] = "abc";
+// 	printf("%s\n", ft_strtrim(s1, set));
 
-//     char s2[]= "   Hello, World!   ";
-//     char set2[] = " ";
-//     printf("%s\n", ft_strtrim(s2, set2));
+// 	char s2[] = "   Hello, World!   ";
+// 	char set2[] = " ";
+// 	printf("%s\n", ft_strtrim(s2, set2));
 
-//     char s3[] = "###OpenAI###";
-//     char set3[] = "#";
-//     printf("%s\n", ft_strtrim(s3, set3));
+// 	char s3[] = "###OpenAI###";
+// 	char set3[] = "#";
+// 	printf("%s\n", ft_strtrim(s3, set3));
 
-//     char s4[] = "xyzHello, World!xyz";
-//     char set4[] = "xyz";
-//     printf("%s\n", ft_strtrim(s4, set4));
+// 	char s4[] = "xyzHello, World!xyz";
+// 	char set4[] = "xyz";
+// 	printf("%s\n", ft_strtrim(s4, set4));
 
-//     char s5[] = "NoTrimHere";
-//     char set5[] = " ";
-//     printf("%s\n", ft_strtrim(s5, set5));
+// 	char s5[] = "NoTrimHere";
+// 	char set5[] = " ";
+// 	printf("%s\n", ft_strtrim(s5, set5));
 
-// return 0;
+// 	return (0);
 // }
