@@ -6,7 +6,7 @@
 /*   By: mnahli <mnahli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 13:27:49 by mnahli            #+#    #+#             */
-/*   Updated: 2024/11/13 19:50:20 by mnahli           ###   ########.fr       */
+/*   Updated: 2024/11/14 19:55:06 by mnahli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	while (i < n)
 	{
 		if (str[i] == x)
-			return ((char *)str + i);
+			return ((void *)str + i);
 		i++;
 	}
 	return (NULL);

@@ -6,22 +6,22 @@
 /*   By: mnahli <mnahli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 13:28:01 by mnahli            #+#    #+#             */
-/*   Updated: 2024/11/13 19:48:35 by mnahli           ###   ########.fr       */
+/*   Updated: 2024/11/14 20:35:47 by mnahli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, int dstsize)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	int		i;
-	size_t	strlen;
+	size_t	i;
+	size_t	str_len;
 
-	strlen = 0;
-	while (src[strlen] != '\0')
-		strlen++;
+	str_len = 0;
+	while (src[str_len] != '\0')
+		str_len++;
 	if (dstsize == 0)
-		return (strlen);
+		return (str_len);
 	i = 0;
 	while (src[i] != '\0' && i < dstsize - 1)
 	{
@@ -29,5 +29,14 @@ size_t	ft_strlcpy(char *dst, const char *src, int dstsize)
 		i++;
 	}
 	dst[i] = '\0';
-	return (strlen);
+	return (str_len);
 }
+// int main()
+// {
+// 	char dst[] = "my name is mohamed";
+// 	char src[] = "adil";
+// 	size_t len = 30;
+
+// 	printf("%zu\n", strlcpy(dst, src, len));
+// 	printf("%s\n", dst);
+// }

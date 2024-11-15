@@ -6,7 +6,7 @@
 /*   By: mnahli <mnahli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 17:50:19 by mnahli            #+#    #+#             */
-/*   Updated: 2024/11/13 19:48:20 by mnahli           ###   ########.fr       */
+/*   Updated: 2024/11/14 21:27:33 by mnahli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +34,11 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	return (ptr);
 }
 
-char	lowercase_wrapper(unsigned int i, char c)
-{
-	(void)i;
-	return (ft_tolower(c));
-}
+// char	lowercase_wrapper(unsigned int i, char c)
+// {
+// 	(void)i;
+// 	return (ft_tolower(c));
+// }
 
 // int	main(void) {
 // 	char	*str;

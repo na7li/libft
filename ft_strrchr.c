@@ -6,7 +6,7 @@
 /*   By: mnahli <mnahli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 13:28:09 by mnahli            #+#    #+#             */
-/*   Updated: 2024/11/13 15:05:52 by mnahli           ###   ########.fr       */
+/*   Updated: 2024/11/14 19:38:07 by mnahli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ char	*ft_strrchr(const char *s, int c)
 // int main()
 // {
 //     char str[] = "Hello World!";
-//     printf("%s\n",ft_strrchr(str, '\0'));
-//     printf("%s\n",strrchr(str, '\0'));
+//     printf("%s\n",ft_strrchr(str, 'W'));
+//     printf("%s\n",strrchr(str, 'W'));
 //     return 0;
 // }

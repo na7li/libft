@@ -6,7 +6,7 @@
 /*   By: mnahli <mnahli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 13:21:27 by mnahli            #+#    #+#             */
-/*   Updated: 2024/11/13 19:46:20 by mnahli           ###   ########.fr       */
+/*   Updated: 2024/11/14 20:42:50 by mnahli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,28 +31,28 @@ int	ft_atoi(const char *str)
 	}
 	while (str[i] >= '0' && str[i] <= '9')
 	{
-		num = num * 10 + (str[i] - '0');
-		if (num > LLONG_MAX && val == 1)
+		if (val == 1 && num > LLONG_MAX)
 			return (-1);
-		if (num > LLONG_MAX && val == -1)
+		if (val == -1 && num > LLONG_MAX)
 			return (0);
+		num = num * 10 + (str[i] - '0');
 		i++;
 	}
-	return ((num * val));
+	return ((int)(num * val));
 }
 
 // int main()
 // {
 // 	printf("%i\n", ft_atoi("abc"));
 // 	printf("%i\n", atoi("abc"));
-// 	printf("%i\n", ft_atoi("-9223372036854775807"));
-// 	printf("%i\n", atoi("-9223372036854775807"));
-//     // printf("%i\n", ft_atoi("   +123dfg"));
-//     // printf("%i\n", ft_atoi("   -1235er"));
-//     // printf("%i\n", ft_atoi("   --123ert"));
-//     // printf("%i\n", ft_atoi("   -+123dfg"));
-//     // printf("%i\n", ft_atoi("   ++123erg"));
-//     // printf("%i\n", ft_atoi("   -s123fgh"));
-//     // printf("%i\n", ft_atoi("   sdf123rth"));
-//     // printf("%i\n", ft_atoi(" d  123rth"));
+// 	printf("%i\n", ft_atoi("LLONG_MAX"));
+// 	printf("%i\n", atoi("LLONG_MAX"));
+//     printf("%i\n", ft_atoi("   +123dfg"));
+//     printf("%i\n", ft_atoi("   -1235er"));
+//     printf("%i\n", ft_atoi("   --123ert"));
+//     printf("%i\n", ft_atoi("   -+123dfg"));
+//     printf("%i\n", ft_atoi("   ++123erg"));
+//     printf("%i\n", ft_atoi("   -s123fgh"));
+//     printf("%i\n", ft_atoi("   sdf123rth"));
+//     printf("%i\n", ft_atoi(" d  123rth"));
 // }

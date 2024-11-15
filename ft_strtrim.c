@@ -6,13 +6,13 @@
 /*   By: mnahli <mnahli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 13:46:23 by mnahli            #+#    #+#             */
-/*   Updated: 2024/11/13 19:16:42 by mnahli           ###   ########.fr       */
+/*   Updated: 2024/11/14 21:55:50 by mnahli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_prefix_len(const char *s1, char const *set)
+static int	ft_prefix_len(const char *s1, char const *set)
 {
 	size_t	len_prefix;
 	size_t	i;
@@ -36,7 +36,7 @@ int	ft_prefix_len(const char *s1, char const *set)
 	return (len_prefix);
 }
 
-int	ft_sufix_len(const char *s1, char const *set)
+static int	ft_sufix_len(const char *s1, char const *set)
 {
 	size_t	len_s1;
 	size_t	len_suffix;
@@ -64,12 +64,14 @@ int	ft_sufix_len(const char *s1, char const *set)
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t	len_prefix;
 	size_t	len_str;
 	size_t	i;
 	char	*ptr;
 
-	len_prefix = ft_prefix_len(s1, set);
+	if (!s1 || !set)
+		return (NULL);
+	if (*s1 == '\0')
+		return (ft_strdup(""));
 	len_str = ft_strlen(s1) - ft_prefix_len(s1, set) - ft_sufix_len(s1, set);
 	ptr = (char *)malloc((len_str + 1) * sizeof(char));
 	if (!ptr)
@@ -77,7 +79,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	i = 0;
 	while (i < len_str)
 	{
-		ptr[i] = s1[i + len_prefix];
+		ptr[i] = s1[i + ft_prefix_len(s1, set)];
 		i++;
 	}
 	ptr[i] = '\0';

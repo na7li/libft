@@ -6,7 +6,7 @@
 /*   By: mnahli <mnahli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 17:54:19 by mnahli            #+#    #+#             */
-/*   Updated: 2024/11/13 19:02:38 by mnahli           ###   ########.fr       */
+/*   Updated: 2024/11/15 17:02:29 by mnahli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strdup(const char *s1)
 	if (!ptr)
 		return (NULL);
 	i = 0;
-	while (i < len)
+	while (s1[i])
 	{
 		ptr[i] = s1[i];
 		i++;
