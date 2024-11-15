@@ -6,7 +6,7 @@
 /*   By: mnahli <mnahli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 13:28:05 by mnahli            #+#    #+#             */
-/*   Updated: 2024/11/13 19:47:29 by mnahli           ###   ########.fr       */
+/*   Updated: 2024/11/15 20:41:57 by mnahli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,24 +15,17 @@
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t	i;
-	size_t	j;
-	size_t	need_len;
 
 	i = 0;
-	need_len = ft_strlen(needle);
-	//  null  if -> len ==0  , hay == null
-	if (needle[i] == '\0')
+	if (needle[0] == '\0')
 		return ((char *)haystack);
-	while (haystack[i] && i < len)
+	while (len != 0 && haystack[i] && (i + ft_strlen(needle)) <= len)
 	{
-		j = 0;
-		while (haystack[i] == needle[j] && j < need_len)
+		if (haystack[i] == needle[0])
 		{
-			i++;
-			j++;
+			if (ft_strncmp(haystack + i, needle, ft_strlen(needle)) == 0)
+				return ((char *)haystack + i);
 		}
-		if (needle[j] == '\0')
-			return ((char *)haystack + i - j);
 		i++;
 	}
 	return (NULL);
@@ -40,12 +33,12 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 
 // int main()
 // {
-//     char haystack[] = "i lean c language in 42 school";
-//     char needle[] = "lang";
-//     size_t len = 0;
+// char haystack[] = "i lean c language in 42 school";
+// char needle[] = "lang";
+//     size_t len = -1;
 
-//     printf("%s\n", ft_strnstr(haystack, needle, len));
+//     // printf("%s\n", ft_strnstr(haystack, needle, len));
 //     printf("%s\n", strnstr(haystack, needle, len));
-//     printf("%p\n", ft_strnstr(haystack, needle, len));
-//     printf("%p\n", strnstr(haystack, needle, len));
+//     // printf("%p\n", ft_strnstr(haystack, needle, len));
+//     // printf("%p\n", strnstr(haystack, needle, len));
 // }
