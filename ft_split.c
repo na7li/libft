@@ -6,7 +6,7 @@
 /*   By: mnahli <mnahli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 17:46:59 by mnahli            #+#    #+#             */
-/*   Updated: 2024/11/16 11:26:19 by mnahli           ###   ########.fr       */
+/*   Updated: 2024/11/16 15:53:49 by mnahli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,66 +35,76 @@ static int	ft_word_count(char const *s, char c)
 	return (n);
 }
 
-static int	ft_word_len(char const *s, char c, unsigned int i)
+static char	*ft_get_word(char const *s, char c, size_t *index)
 {
-	unsigned int	l;
+	size_t	start;
+	size_t	len;
+	char	*word;
+	size_t	i;
 
-	l = 0;
-	while (s[i] != c && s[i])
+	while (s[*index] == c && s[*index])
+		(*index)++;
+	start = *index;
+	len = 0;
+	while (s[*index] != c && s[*index])
 	{
-		i++;
-		l++;
+		(*index)++;
+		len++;
 	}
-	return (l);
-}
-
-static char	*ft_word_copy(char const *s, unsigned int j, size_t l)
-{
-	unsigned int	i;
-	char			*word;
-
-	word = (char *)malloc((l + 1) * sizeof(char));
+	word = (char *)malloc((len + 1) * sizeof(char));
 	if (!word)
 		return (NULL);
 	i = 0;
-	while (i < l)
+	while (i < len)
 	{
-		word[i] = s[j + i];
+		word[i] = s[start + i];
 		i++;
 	}
-	word[i] = '\0';
+	word[len] = '\0';
 	return (word);
+}
+
+static void	ft_free_split(char **arr)
+{
+	size_t	i;
+
+	if (!arr)
+		return ;
+	i = 0;
+	while (arr[i])
+	{
+		free(arr[i]);
+		i++;
+	}
+	free(arr);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	size_t	j;
-	int		m;
-	size_t	l;
-	char	**b;
+	char	**result;
+	int		i;
+	size_t	index;
 
 	if (!s)
 		return (NULL);
-	b = (char **)malloc((ft_word_count(s, c) + 1) * sizeof(char *));
-	if (!b)
+	result = (char **)malloc((ft_word_count(s, c) + 1) * sizeof(char *));
+	if (!result)
 		return (NULL);
-	m = 0;
-	j = 0;
-	while (m < ft_word_count(s, c))
+	index = 0;
+	i = 0;
+	while (i < ft_word_count(s, c))
 	{
-		while (s[j] == c && s[j])
-			j++;
-		l = ft_word_len(s, c, j);
-		b[m] = ft_word_copy(s, j, l);
-		if (!b[m])
+		result[i] = ft_get_word(s, c, &index);
+		if (!result[i])
+		{
+			ft_free_split(result);
 			return (NULL);
-		j = j + l;
-		m++;
+		}
+		i++;
 	}
-	b[m] = NULL;
-	return (b);
+	result[ft_word_count(s, c)] = NULL;
+	return (result);
 }
-
 // int main()
 // {
 //     char s[] = "  my na    me is med";
