@@ -6,84 +6,61 @@
 /*   By: mnahli <mnahli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 13:46:23 by mnahli            #+#    #+#             */
-/*   Updated: 2024/11/14 21:55:50 by mnahli           ###   ########.fr       */
+/*   Updated: 2024/11/16 08:52:52 by mnahli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_prefix_len(const char *s1, char const *set)
+static int	ft_samechar(const char s1, const char *set)
 {
-	size_t	len_prefix;
-	size_t	i;
-	size_t	j;
+	int	i;
 
 	i = 0;
-	while (s1[i])
+	while (set[i])
 	{
-		j = 0;
-		while (set[j])
-		{
-			if (s1[i] == set[j])
-				break ;
-			j++;
-		}
-		if (set[j] == '\0')
-			break ;
+		if (set[i] == s1)
+			return (1);
 		i++;
 	}
-	len_prefix = i;
-	return (len_prefix);
+	return (0);
 }
 
-static int	ft_sufix_len(const char *s1, char const *set)
+static char	*ft_str(int i, int j, const char *s1)
 {
-	size_t	len_s1;
-	size_t	len_suffix;
-	size_t	j;
-	size_t	k;
+	char	*str;
+	int		k;
 
-	len_s1 = ft_strlen(s1);
-	k = len_s1 - 1;
-	while (k != 0)
+	str = malloc(sizeof(char) * (j - i + 2));
+	if (!str)
+		return (NULL);
+	k = 0;
+	while (i <= j)
 	{
-		j = 0;
-		while (set[j])
-		{
-			if (s1[k] == set[j])
-				break ;
-			j++;
-		}
-		if (set[j] == '\0')
-			break ;
-		k--;
+		str[k] = s1[i];
+		k++;
+		i++;
 	}
-	len_suffix = len_s1 - k - 1;
-	return (len_suffix);
+	str[k] = '\0';
+	return (str);
 }
 
-char	*ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(const char *s1, const char *set)
 {
-	size_t	len_str;
-	size_t	i;
-	char	*ptr;
+	int	i;
+	int	j;
 
 	if (!s1 || !set)
 		return (NULL);
 	if (*s1 == '\0')
 		return (ft_strdup(""));
-	len_str = ft_strlen(s1) - ft_prefix_len(s1, set) - ft_sufix_len(s1, set);
-	ptr = (char *)malloc((len_str + 1) * sizeof(char));
-	if (!ptr)
-		return (NULL);
 	i = 0;
-	while (i < len_str)
-	{
-		ptr[i] = s1[i + ft_prefix_len(s1, set)];
+	while (s1[i] && ft_samechar(s1[i], set))
 		i++;
-	}
-	ptr[i] = '\0';
-	return (ptr);
+	j = ft_strlen(s1) - 1;
+	while (j > i && ft_samechar(s1[j], set))
+		j--;
+	return (ft_str(i, j, s1));
 }
 
 // int	main(void)

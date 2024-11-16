@@ -6,7 +6,7 @@
 /*   By: mnahli <mnahli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 17:22:21 by mnahli            #+#    #+#             */
-/*   Updated: 2024/11/13 19:55:49 by mnahli           ###   ########.fr       */
+/*   Updated: 2024/11/16 09:22:52 by mnahli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ static char	*ft_convcopy(char *str, int n, size_t len, int sign)
 
 	i = len;
 	str[i] = '\0';
-	while (i >= 0)
+	while (i > 0)
 	{
 		str[i - 1] = (n % 10) + 48;
 		n = n / 10;
@@ -61,9 +61,10 @@ char	*ft_itoa(int n)
 	len = ft_lencalcul(n);
 	if (sign < 0)
 		len += 1;
-	str = (char *)malloc(len + 1);
+	str = (char *)malloc((len + 1) * sizeof(char));
 	if (!str)
 		return (NULL);
 	str = ft_convcopy(str, n, len, sign);
+	str[len] = '\0';
 	return (str);
 }

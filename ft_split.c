@@ -6,7 +6,7 @@
 /*   By: mnahli <mnahli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 17:46:59 by mnahli            #+#    #+#             */
-/*   Updated: 2024/11/13 19:49:19 by mnahli           ###   ########.fr       */
+/*   Updated: 2024/11/16 11:26:19 by mnahli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,19 +68,19 @@ static char	*ft_word_copy(char const *s, unsigned int j, size_t l)
 
 char	**ft_split(char const *s, char c)
 {
-	size_t	n;
 	size_t	j;
-	size_t	m;
+	int		m;
 	size_t	l;
 	char	**b;
 
-	n = ft_word_count(s, c);
-	b = (char **)malloc((n + 1) * sizeof(char *));
+	if (!s)
+		return (NULL);
+	b = (char **)malloc((ft_word_count(s, c) + 1) * sizeof(char *));
 	if (!b)
 		return (NULL);
 	m = 0;
 	j = 0;
-	while (m < n)
+	while (m < ft_word_count(s, c))
 	{
 		while (s[j] == c && s[j])
 			j++;
