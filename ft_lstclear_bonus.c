@@ -6,7 +6,7 @@
 /*   By: mnahli <mnahli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 20:54:03 by mnahli            #+#    #+#             */
-/*   Updated: 2024/11/15 20:54:04 by mnahli           ###   ########.fr       */
+/*   Updated: 2024/11/18 09:23:46 by mnahli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,49 +27,3 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	}
 	*lst = NULL;
 }
-
-// f
-
-// void del(void* content)
-// {
-// 	free(content);
-// }
-// int main()
-// {
-// 	t_list* n1, *n2, *n3, *n4;
-// 	n1 = malloc(sizeof(t_list));
-// 	n2 = malloc(sizeof(t_list));
-// 	n3 = malloc(sizeof(t_list));
-// 	n4 = malloc(sizeof(t_list));
-// 	t_list* tmp;
-// 	tmp = n1;
-// 	n1->content = ft_strdup("my");
-// 	n1->next = n2;
-// 	n2->content = ft_strdup("name");
-// 	n2->next = n3;
-// 	n3->content = ft_strdup("is");
-// 	n3->next = n4;
-// 	n4->content = ft_strdup("simo");
-// 	n4->next = NULL;
-// 	ft_lstclear(&n1, del);
-// 	if (n1 == NULL)
-// 		printf("list is cleared");
-// }
-
-// void ft_lstclear(t_list **lst, void (*del)(void*))
-// {
-//     t_list* tmp;
-
-//     tmp = *lst;
-//     while(*lst != NULL)
-//     {
-//         tmp = (*lst)->next;
-//         del((*lst)->content);
-//         free(*lst);
-//         *lst = tmp;
-//     }
-//         del((*lst)->content);
-//         free(*lst);
-//         free(&tmp);
-//         *lst = NULL;
-// }
