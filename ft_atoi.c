@@ -6,7 +6,7 @@
 /*   By: mnahli <mnahli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 13:21:27 by mnahli            #+#    #+#             */
-/*   Updated: 2024/11/14 20:42:50 by mnahli           ###   ########.fr       */
+/*   Updated: 2024/11/17 12:38:19 by mnahli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,19 +40,3 @@ int	ft_atoi(const char *str)
 	}
 	return ((int)(num * val));
 }
-
-// int main()
-// {
-// 	printf("%i\n", ft_atoi("abc"));
-// 	printf("%i\n", atoi("abc"));
-// 	printf("%i\n", ft_atoi("LLONG_MAX"));
-// 	printf("%i\n", atoi("LLONG_MAX"));
-//     printf("%i\n", ft_atoi("   +123dfg"));
-//     printf("%i\n", ft_atoi("   -1235er"));
-//     printf("%i\n", ft_atoi("   --123ert"));
-//     printf("%i\n", ft_atoi("   -+123dfg"));
-//     printf("%i\n", ft_atoi("   ++123erg"));
-//     printf("%i\n", ft_atoi("   -s123fgh"));
-//     printf("%i\n", ft_atoi("   sdf123rth"));
-//     printf("%i\n", ft_atoi(" d  123rth"));
-// }

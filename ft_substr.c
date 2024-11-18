@@ -6,7 +6,7 @@
 /*   By: mnahli <mnahli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 12:57:03 by mnahli            #+#    #+#             */
-/*   Updated: 2024/11/14 21:28:12 by mnahli           ###   ########.fr       */
+/*   Updated: 2024/11/17 12:12:31 by mnahli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,11 +39,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	substr[i] = '\0';
 	return (substr);
 }
-// int main()
-// {
-//     char s[] = "Hello World hey weo";
-//     size_t len = 8;
-//     unsigned int start = 6;
-//     printf("%s\n", ft_substr(s, start, len));
-//     return 0;
-// }

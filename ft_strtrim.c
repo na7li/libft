@@ -6,7 +6,7 @@
 /*   By: mnahli <mnahli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 13:46:23 by mnahli            #+#    #+#             */
-/*   Updated: 2024/11/16 08:52:52 by mnahli           ###   ########.fr       */
+/*   Updated: 2024/11/17 12:08:26 by mnahli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,28 +62,3 @@ char	*ft_strtrim(const char *s1, const char *set)
 		j--;
 	return (ft_str(i, j, s1));
 }
-
-// int	main(void)
-// {
-// 	char s1[] = "abcaacbI'm nahliabcbacab";
-// 	char set[] = "abc";
-// 	printf("%s\n", ft_strtrim(s1, set));
-
-// 	char s2[] = "   Hello, World!   ";
-// 	char set2[] = " ";
-// 	printf("%s\n", ft_strtrim(s2, set2));
-
-// 	char s3[] = "###OpenAI###";
-// 	char set3[] = "#";
-// 	printf("%s\n", ft_strtrim(s3, set3));
-
-// 	char s4[] = "xyzHello, World!xyz";
-// 	char set4[] = "xyz";
-// 	printf("%s\n", ft_strtrim(s4, set4));
-
-// 	char s5[] = "NoTrimHere";
-// 	char set5[] = " ";
-// 	printf("%s\n", ft_strtrim(s5, set5));
-
-// 	return (0);
-// }

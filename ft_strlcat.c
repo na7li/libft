@@ -6,7 +6,7 @@
 /*   By: mnahli <mnahli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 13:27:59 by mnahli            #+#    #+#             */
-/*   Updated: 2024/11/14 19:21:24 by mnahli           ###   ########.fr       */
+/*   Updated: 2024/11/17 12:39:02 by mnahli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,23 +33,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	dst[dst_len + i] = '\0';
 	return (dst_len + src_len);
 }
-
-// int main()
-// {
-//     size_t s = 5;
-
-//     char ftdst[50] = "abc";
-//     char dst[50] = "abc";
-//     char src[50] = "defg";
-//     printf("1.1 dst lenth is :  %ld\n", strlen(dst));
-//     printf("1.2 dst_size =  %zu\n", s);
-//     printf("2. src lenth =  4\n");
-
-//     printf("ft_strlcat return is :     %ld\n", ft_strlcat(ftdst, src, s));
-//     printf("dst is :    %s\n", ftdst);
-
-//     printf("strlcat return is :     %ld\n", strlcat(dst, src, s));
-//     printf("dst is :    %s\n", dst);
-//     printf("\n");
-//     return 0;
-// }

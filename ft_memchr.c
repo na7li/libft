@@ -6,7 +6,7 @@
 /*   By: mnahli <mnahli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 13:27:49 by mnahli            #+#    #+#             */
-/*   Updated: 2024/11/14 19:55:06 by mnahli           ###   ########.fr       */
+/*   Updated: 2024/11/17 14:39:51 by mnahli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,16 +29,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
-// int main()
-// {
-//     char str[] = "abcde";
-//     char c = 'j';
-//     size_t n = 6;
-//     printf("%p\n", ft_memchr(str, c, n));
-//     printf("%p\n", memchr(str, c, n));
-
-//     char *pos = memchr(str, c, n);
-//     printf("mine	%s\n", ft_memchr(str, c, n));
-//     printf("their	%s\n", memchr(str, c, n));
-
-// }

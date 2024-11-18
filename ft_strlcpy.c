@@ -6,7 +6,7 @@
 /*   By: mnahli <mnahli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 13:28:01 by mnahli            #+#    #+#             */
-/*   Updated: 2024/11/14 20:35:47 by mnahli           ###   ########.fr       */
+/*   Updated: 2024/11/17 15:10:27 by mnahli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	dst[i] = '\0';
 	return (str_len);
 }
-// int main()
-// {
-// 	char dst[] = "my name is mohamed";
-// 	char src[] = "adil";
-// 	size_t len = 30;
-
-// 	printf("%zu\n", strlcpy(dst, src, len));
-// 	printf("%s\n", dst);
-// }

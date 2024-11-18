@@ -6,7 +6,7 @@
 /*   By: mnahli <mnahli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 17:22:21 by mnahli            #+#    #+#             */
-/*   Updated: 2024/11/16 09:22:52 by mnahli           ###   ########.fr       */
+/*   Updated: 2024/11/17 20:13:51 by mnahli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,4 +67,9 @@ char	*ft_itoa(int n)
 	str = ft_convcopy(str, n, len, sign);
 	str[len] = '\0';
 	return (str);
+}
+int main()
+{
+	int n = 02;
+	printf("%s\n", ft_itoa(n));
 }

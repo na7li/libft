@@ -6,7 +6,7 @@
 /*   By: mnahli <mnahli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 17:46:59 by mnahli            #+#    #+#             */
-/*   Updated: 2024/11/16 15:53:49 by mnahli           ###   ########.fr       */
+/*   Updated: 2024/11/17 11:59:17 by mnahli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,18 +105,3 @@ char	**ft_split(char const *s, char c)
 	result[ft_word_count(s, c)] = NULL;
 	return (result);
 }
-// int main()
-// {
-//     char s[] = "  my na    me is med";
-//     char **result = ft_split(s, ' ');
-
-//     // Print each word in the result
-//     int i = 0;
-//     while (result[i]) {
-//         printf("%s\n", result[i]);
-//         free(result[i]); // Free each allocated word
-//         i++;
-//     }
-//     free(result); // Free the array itself
-//     return (0);
-// }

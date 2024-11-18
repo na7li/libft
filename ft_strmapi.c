@@ -6,7 +6,7 @@
 /*   By: mnahli <mnahli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 17:50:19 by mnahli            #+#    #+#             */
-/*   Updated: 2024/11/15 17:45:44 by mnahli           ###   ########.fr       */
+/*   Updated: 2024/11/17 10:39:28 by mnahli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,39 +33,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	ptr[i] = '\0';
 	return (ptr);
 }
-
-// char f(unsigned int i, char c)
-// {
-// 	i = 0;
-// 	c -= 32;
-// 	return (c);
-// }
-// int main()
-// {
-// 	char s[] = "hello";
-// 	char (*p)(unsigned int, char)= f;
-// 	printf("%s", ft_strmapi(s, p));
-// }
-
-// char	lowercase_wrapper(unsigned int i, char c)
-// {
-// 	(void)i;
-// 	return (ft_tolower(c));
-// }
-//
-// int	main(void) {
-// 	char	*str;
-// 	char	*result;
-//
-// 	*str = "HELLO, WORLD!";
-// 	*result = ft_strmapi(str, lowercase_wrapper);
-// 	if (result)
-// 	{
-// 		printf("Original string: %s\n", str);
-// 		printf("Transformed string: %s\n", result);
-// 		free(result); // free up the memory
-// 	}
-// 	else
-// 		printf("Memory allocation failed!\n");
-// 	return (0);
-// }

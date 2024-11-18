@@ -6,7 +6,7 @@
 /*   By: mnahli <mnahli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 17:54:19 by mnahli            #+#    #+#             */
-/*   Updated: 2024/11/15 17:02:29 by mnahli           ###   ########.fr       */
+/*   Updated: 2024/11/17 12:15:40 by mnahli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,3 @@ char	*ft_strdup(const char *s1)
 	ptr[i] = '\0';
 	return (ptr);
 }
-// int main()
-// {
-//     char str[] = "abcd";
-
-//     printf("%s\n", ft_strdup(str));
-//     printf("%s\n", strdup(str));
-//     printf("%p\n", ft_strdup(str));
-//     printf("%p\n", strdup(str));
-// }

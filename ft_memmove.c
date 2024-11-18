@@ -6,7 +6,7 @@
 /*   By: mnahli <mnahli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 13:27:54 by mnahli            #+#    #+#             */
-/*   Updated: 2024/11/16 20:52:00 by mnahli           ###   ########.fr       */
+/*   Updated: 2024/11/17 10:54:54 by mnahli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,4 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		}
 	}
 	return (dst);
-}
-
-int main()
-{
-	
 }

@@ -6,7 +6,7 @@
 /*   By: mnahli <mnahli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 13:28:11 by mnahli            #+#    #+#             */
-/*   Updated: 2024/11/13 13:45:13 by mnahli           ###   ########.fr       */
+/*   Updated: 2024/11/17 14:45:33 by mnahli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,3 @@ int	ft_toupper(int c)
 		return (c - 32);
 	return (c);
 }
-// int main()
-// {
-//     char c = 'h';
-//     printf("My functino : %c\n", ft_toupper(c));
-//     printf("touper function : %c\n", toupper(c));
-// }

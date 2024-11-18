@@ -6,7 +6,7 @@
 /*   By: mnahli <mnahli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 13:27:51 by mnahli            #+#    #+#             */
-/*   Updated: 2024/11/14 20:00:35 by mnahli           ###   ########.fr       */
+/*   Updated: 2024/11/17 14:02:52 by mnahli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,13 +29,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-
-// int main()
-// {
-//     char s1[10] = "abcfe";
-//     char s2[10] = "abcfe";
-//     size_t n = 10;
-
-//     printf("%d\n", ft_memcmp(s1, s2, n));
-//     printf("%d\n", memcmp(s1, s2, n));
-// }

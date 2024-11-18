@@ -6,7 +6,7 @@
 /*   By: mnahli <mnahli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 11:54:38 by mnahli            #+#    #+#             */
-/*   Updated: 2024/11/14 11:19:50 by mnahli           ###   ########.fr       */
+/*   Updated: 2024/11/17 12:08:58 by mnahli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,13 +33,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ptr[j] = '\0';
 	return (ptr);
 }
-// int main()
-// {
-//     char s1[] = "my name is ";
-//     char s2[] = "mohamed nahli";
-//     printf("%s\n", ft_strjoin(s1, s2));
-
-//     printf("%lu\n", strlen(ft_strjoin(s1, s2)));
-//     printf("%lu\n", sizeof(ft_strjoin(s1, s2)));
-// return (0);
-// }
