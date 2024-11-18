@@ -6,7 +6,7 @@
 /*   By: mnahli <mnahli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 13:21:27 by mnahli            #+#    #+#             */
-/*   Updated: 2024/11/17 12:38:19 by mnahli           ###   ########.fr       */
+/*   Updated: 2024/11/18 09:54:08 by mnahli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,9 @@ int	ft_atoi(const char *str)
 	}
 	while (str[i] >= '0' && str[i] <= '9')
 	{
-		if (val == 1 && num > LLONG_MAX)
+		if (val == 1 && num > 9223372036854775807LL)
 			return (-1);
-		if (val == -1 && num > LLONG_MAX)
+		if (val == -1 && num > 9223372036854775807LL)
 			return (0);
 		num = num * 10 + (str[i] - '0');
 		i++;

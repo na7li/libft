@@ -6,7 +6,7 @@
 /*   By: mnahli <mnahli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 13:20:52 by mnahli            #+#    #+#             */
-/*   Updated: 2024/11/18 09:49:02 by mnahli           ###   ########.fr       */
+/*   Updated: 2024/11/18 10:00:59 by mnahli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,6 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-typedef struct s_list
-{
-	void					*content;
-	struct s_list			*next;
-}	t_list;
 char	**ft_split(char const *s, char c);
 char	*ft_itoa(int n);
 char	*ft_strchr(const char *s, int c);
@@ -65,5 +60,11 @@ void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
+
+typedef struct s_list
+{
+	void					*content;
+	struct s_list			*next;
+}	t_list;
 
 #endif
