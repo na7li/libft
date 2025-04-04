@@ -88,7 +88,7 @@ Libft is split into several parts:
 ## 🚀 How to Use
 #### 1 - Clone the repository
 ```bash
-git clone https://github.com/szemmouri/Libft.git
+https://github.com/na7li/libft.git
 ```
 
 #### 2 - Enter the project folder and run `make`
